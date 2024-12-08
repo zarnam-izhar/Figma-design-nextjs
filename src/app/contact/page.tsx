@@ -1,4 +1,4 @@
-
+import Image from "next/image";
 
 export default function Contact() {
     return (
@@ -12,7 +12,7 @@ export default function Contact() {
           <div className="relative max-w-7xl mx-auto px-4 text-center text-black">
             {/* Logo */}
             <div className="mb-4">
-              <img src="/logo.png" alt="Logo" className="mx-auto w-24" /> 
+              <Image src="/logo.png" alt="Logo" className="mx-auto w-24" width={96} height={96} /> 
             </div>
             
            

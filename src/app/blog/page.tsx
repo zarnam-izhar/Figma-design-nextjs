@@ -14,7 +14,7 @@ export default function BlogPage() {
 
   return (
     <div className="bg-gray-50 min-h-screen">
-      {/* Background Section with Image and Opacity */}
+      
       <div
         className="relative bg-cover bg-center py-16"
         style={{ backgroundImage: 'url("/bg.jpg")' }}
@@ -22,7 +22,7 @@ export default function BlogPage() {
         <div className="absolute inset-0 bg-slate-300 opacity-50"></div>
         <div className="relative max-w-7xl mx-auto px-4 text-center text-white">
           <div className="mb-4">
-            <img src="/logo.png" alt="Logo" className="mx-auto w-24" />
+            <Image src="/logo.png" alt="Logo" className="mx-auto w-24" width={96} height={96} />
           </div>
           <h1 className="text-4xl text-black font-semibold mt-4">Blog</h1>
           <p className="text-sm text-black">Home {'>'} Blog</p>
@@ -136,7 +136,7 @@ export default function BlogPage() {
 
         {/* Sidebar Section */}
         <aside className="lg:col-span-4">
-          <div className="bg-white  rounded-lg p-6 mb-6">
+          <div className="bg-white rounded-lg p-6 mb-6">
             {/* Search Bar */}
             <input
               type="text"
@@ -146,10 +146,9 @@ export default function BlogPage() {
 
             <h3 className="text-xl font-bold mb-8">Categories</h3>
             <ul className="space-y-11">
-            <li>
+              <li>
                 <a className="text-gray-600 hover:underline">Craft</a>
               </li>
-              
               <li>
                 <a className="text-gray-600 hover:underline">Design</a>
               </li>
@@ -163,26 +162,33 @@ export default function BlogPage() {
                 <a className="text-gray-600 hover:underline">Handmade</a>
               </li>
             </ul>
-          </div><div className="bg-white rounded-lg p-6 space-y-6">
-  <h3 className="text-xl font-bold mb-4">Recent Posts</h3>
-  <ul className="space-y-8"> 
-    {/* Recent Post 1 */}
-    <li className="flex items-center space-x-3">
-      <img
-        src="/recent1.jpg"
-        alt="Recent Post 1"
-        className="w-12 h-12 object-cover rounded"
-      />
+          </div>
+
+          {/* Recent Posts Section */}
+          <div className="bg-white rounded-lg p-6 space-y-6">
+            <h3 className="text-xl font-bold mb-4">Recent Posts</h3>
+            <ul className="space-y-8"> 
+              {/* Recent Post 1 */}
+              <li className="flex items-center space-x-3">
+                <Image
+                  src="/recent1.jpg"
+                  alt="Recent Post 1"
+                  className="w-12 h-12 object-cover rounded"
+                  width={48} height={48}
+                />
+
+
       <a className="text-black hover:underline">
         Going all-in with <br /> millenial design
       </a>
     </li>
     {/* Recent Post 2 */}
     <li className="flex items-center space-x-3">
-      <img
+      <Image
         src="/recent2.jpg"
         alt="Recent Post 2"
         className="w-12 h-12 object-cover rounded"
+        width={48} height={48}
       />
       <a className="text-black hover:underline">
         Exploring new ways<br/> of decorating
@@ -190,10 +196,11 @@ export default function BlogPage() {
     </li>
     {/* Recent Post 3 */}
     <li className="flex items-center space-x-3">
-      <img
+      <Image
         src="/recent3.jpg"
         alt="Recent Post 3"
         className="w-12 h-12 object-cover rounded"
+        width={48} height={48}
       />
       <a className="text-black hover:underline">
         Handmade peices <br/>that took time to make
@@ -201,10 +208,11 @@ export default function BlogPage() {
     </li>
     {/* Recent Post 4 */}
     <li className="flex items-center space-x-3">
-      <img
+      <Image
         src="/recent.jpg"
         alt="Recent Post 4"
         className="w-12 h-12 object-cover rounded"
+        width={48} height={48}
       />
       <a className="text-black hover:underline">
         Modern home in <br/> milan
@@ -212,10 +220,11 @@ export default function BlogPage() {
     </li>
     {/* Recent Post 5 */}
     <li className="flex items-center space-x-3">
-      <img
+      <Image
         src="/recent4.jpg"
         alt="Recent Post 5"
         className="w-12 h-12 object-cover rounded"
+        width={48} height={48}
       />
       <a className="text-black hover:underline">
         Colorful office

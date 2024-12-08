@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,7 +31,39 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Navbar />
         {children}
+        
+    {/* Additional Section with Icons */}
+    <div className='bg-[#FAF3EA] w-full h-[270px]'>
+        <div className='flex gap-20 text-left justify-center'>
+          <Image src="/trophy 1.png" alt='Tofi' width={52.77} height={60} className='w-[52.77px] h-[60px] mt-24' />
+          <h2 className='font-600 text-[25px] mt-24'>
+            High Quality 
+            <span className='grid flex-col text-[20px] text-[#898989]'>crafted from top materials</span>
+          </h2>
+          <Image src="/guarantee.png" alt='Tofi' width={52.77} height={60} className='w-[52.77px] h-[60px] mt-24' />
+          <h2 className='w-[258px] h-[70px] text-[25px] mt-24'>
+            Warranty Protection
+            <span className='grid flex-col text-[20px] text-[#898989]'>Over 2 years</span>
+          </h2>
+          <Image src="/shipping.png" alt='Tofi' width={52.77} height={60} className='w-[52.77px] h-[60px] mt-24' />
+          <h2 className='text-[25px] mt-24'>
+            Free Shipping
+            <span className='grid flex-col text-[20px] text-[#898989]'>Order over 150 $</span>
+          </h2>
+          <Image src="/customer-support.png" alt='Tofi' width={52.77} height={60} className='w-[52.77px] h-[60px] mt-24' />
+          <h2 className='text-[25px] mt-24'>
+            24 / 7 Support 
+            <span className='grid flex-col text-[20px] text-[#898989]'>Dedicated support</span>
+          </h2>
+        </div>
+      </div>
+    
+
+
+        
+        <Footer />
       </body>
     </html>
   );
